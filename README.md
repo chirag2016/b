@@ -1,4 +1,4 @@
-# Employee Management System - Full Stack Integration
+# Attendance,Phonebook & Leave Management System - Full Stack Integration
 
 > **Complete full-stack application** for employee attendance, leave management, and phonebook functionality with modern tech stack and production-ready deployment.
 
@@ -108,7 +108,8 @@ Intern-project-test/
 │   │   │   ├── attendance.py    # Attendance check-in/out
 │   │   │   ├── leaves.py        # Leave management
 │   │   │   ├── holidays.py      # Holiday management
-│   │   │   └── frontend_compat.py # Frontend compatibility layer
+│   │   │   ├── frontend_compat.py # Frontend compatibility layer
+│   │   │   └── __init__.py
 │   │   └── tests/               # Pytest test suite
 │   │       ├── conftest.py      # Pytest fixtures & configuration
 │   │       ├── test_auth.py
@@ -123,6 +124,8 @@ Intern-project-test/
 │   │   ├── script.py.mako      # Migration template
 │   │   └── versions/           # Migration files
 │   │       ├── 6e7a5d0c6bd2_initial.py
+│   │       ├── 6c8dc8d04bd4_add_approval_status_to_attendance.py
+│   │       ├── add_attendance_conformation.py
 │   │       └── e7d293580976_add_manager_id_to_employees.py
 │   │
 │   ├── Dockerfile              # Backend container image
@@ -171,6 +174,7 @@ Intern-project-test/
 │   ├── index.html             # HTML entry point
 │   ├── .env.example           # Frontend environment template
 │   ├── .env                   # Frontend environment variables
+│   ├── Fastapi_Integration.md
 │   └── README.md              # Frontend-specific documentation
 │
 ├── scripts/
@@ -186,34 +190,6 @@ Intern-project-test/
 ├── PR_DESCRIPTION.md         # Integration PR documentation
 └── README.md                 # This file
 
-```
-```
-├── docker-compose.yml          # Root compose file (starts all services)
-├── .env.example                # Environment template
-├── .github/workflows/ci.yml    # CI/CD pipeline
-├── scripts/
-│   └── demo_flow.sh            # Smoke test script
-├── backend/
-│   ├── Dockerfile
-│   ├── app/
-│   │   ├── main.py             # FastAPI application
-│   │   ├── routers/            # API endpoints
-│   │   │   ├── auth.py         # Authentication (OAuth2)
-│   │   │   ├── employees.py    # Employee CRUD
-│   │   │   ├── attendance.py   # Check-in/out
-│   │   │   ├── leaves.py       # Leave requests
-│   │   │   ├── holidays.py     # Holiday management
-│   │   │   └── frontend_compat.py  # Frontend-compatible API
-│   │   └── ...
-│   ├── alembic/                # Database migrations
-│   └── tests/                  # pytest tests
-└── frontend-only/
-    ├── Dockerfile              # Multi-stage build
-    ├── nginx.conf              # Proxy + SPA config
-    └── src/
-        ├── pages/              # React pages
-        ├── services/           # API services
-        └── config/api.ts       # API configuration
 ```
 
 ---
