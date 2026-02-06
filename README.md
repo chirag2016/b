@@ -187,7 +187,7 @@ Intern-project-test/
 └── README.md                 # This file
 
 ```
-.
+```
 ├── docker-compose.yml          # Root compose file (starts all services)
 ├── .env.example                # Environment template
 ├── .github/workflows/ci.yml    # CI/CD pipeline
